@@ -1,0 +1,37 @@
+.home {
+  position: relative;
+
+  &__banner {
+    animation: fadein 500ms cubic-bezier(0.53, 1.51, 0.69, 1.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 85vh;
+    min-height: 500px;
+  }
+
+  &__top-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    .home__socials-aside {
+      position: absolute;
+      left: 15px;
+    }
+
+    .home__jmc-logo {
+      margin: 0 auto;
+    }
+  }
+
+  &__intro {
+    margin-top: 60px;
+    text-align: center;
+
+    @include sm {
+      margin-top: 90px;
+    }
+  }
+}

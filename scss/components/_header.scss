@@ -1,0 +1,46 @@
+$icon-max-height: 50px;
+
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  letter-spacing: 3px;
+  text-align: center;
+  height: $icon-max-height;
+
+  @include sm {
+    letter-spacing: 5px;
+  }
+
+  &__hamburger {
+    position: absolute;
+    left: 15px;
+  }
+
+  &__brand {
+    margin: 0 auto;
+  }
+
+  &__theme-mode-btn {
+    position: absolute;
+    right: 15px;
+    display: flex;
+    background: transparent;
+    border: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+
+    > svg {
+      height: 25px;
+    }
+
+    @include sm {
+      > svg {
+        height: $icon-max-height;
+      }
+    }
+  }
+}

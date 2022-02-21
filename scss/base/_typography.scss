@@ -1,0 +1,66 @@
+@font-face {
+  font-family: 'Cutive';
+  src: url('/fonts/Cutive-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cutive Mono';
+  src: url('/fonts/CutiveMono-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cute Font';
+  src: url('/fonts/CuteFont-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$p1: 18px;
+$p2: 14px;
+$p3: 12px;
+$p4: 10px;
+
+.typography {
+  &__mono {
+    font-family: Cutive Mono, monospace;
+    @include sm {
+      font-size: 1em;
+    }
+    @include lg {
+      font-size: 1.2em;
+    }
+  }
+
+  &__cute {
+    font-family: Cute Font, cursive;
+    font-size: 2em;
+    line-height: 0.7;
+  }
+}
+
+span {
+  display: block;
+  font-size: $p3;
+
+  @include themed() {
+    color: t('primary');
+  }
+
+  @include sm {
+    font-size: $p2;
+  }
+
+  &.small {
+    font-size: $p3;
+  }
+}
+
+p {
+  @include themed() {
+    color: t('primary');
+  }
+}

@@ -1,0 +1,51 @@
+.socials-aside {
+  display: inline-flex;
+  flex-direction: column;
+  height: 155px;
+  justify-content: space-between;
+
+  svg {
+    height: 20px;
+    width: 20px;
+  }
+
+  @include sm {
+    svg {
+      height: 25px;
+      width: 25px;
+    }
+  }
+
+  .link {
+    display: flex;
+
+    &.instagram {
+      &:hover {
+        path {
+          fill: #e1306c;
+        }
+      }
+    }
+    &.twitter {
+      &:hover {
+        path {
+          fill: #1da1f2;
+        }
+      }
+    }
+    &.youtube {
+      &:hover {
+        path {
+          fill: #ff0000;
+        }
+      }
+    }
+    &.github {
+      &:hover {
+        path {
+          fill: #ffdc80;
+        }
+      }
+    }
+  }
+}
