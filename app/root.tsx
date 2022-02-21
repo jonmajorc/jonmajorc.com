@@ -6,14 +6,13 @@ import {
   Scripts,
   ScrollRestoration,
 } from 'remix'
-import type { MetaFunction } from 'remix'
+import type {MetaFunction} from 'remix'
 import mainStyles from '~/styles/main.css'
-import { getSocialMetas } from '~/utils/seo'
-import { Header } from '~/components/header'
-import { ThemeProvider } from './utils/theme-provider'
-import clsx from 'clsx'
+import {getSocialMetas} from '~/utils/seo'
+import {Header} from '~/components/header'
+import {ThemeProvider} from './utils/theme-provider'
 
-export const meta: MetaFunction = (props) => {
+export const meta: MetaFunction = () => {
   return getSocialMetas()
 }
 
@@ -63,7 +62,7 @@ export function links() {
       as: 'image',
       type: 'image/jpg',
     },
-    { rel: 'stylesheet', href: mainStyles },
+    {rel: 'stylesheet', href: mainStyles},
   ]
 }
 
@@ -76,12 +75,12 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <ThemeProvider specifiedTheme={null}>
-        {(theme) => {
+      <ThemeProvider>
+        {theme => {
           return (
             <body className={clsx(['body', `theme--${theme}`])}>
-              <div className="background"></div>
-              <div className="noise"></div>
+              <div className="background" />
+              <div className="noise" />
               <Header />
               <Outlet />
               <ScrollRestoration />

@@ -1,5 +1,5 @@
-import { JMCLogo } from '~/components/icons/jmc-logo'
-import { SocialsAside } from '~/components/socials-aside'
+import {JMCLogo} from '~/components/icons/jmc-logo'
+import {SocialsAside} from '~/components/socials-aside'
 
 export default function Index() {
   return (

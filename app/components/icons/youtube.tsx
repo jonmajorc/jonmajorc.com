@@ -16,4 +16,4 @@ const YouTube = () => {
   )
 }
 
-export { YouTube }
+export {YouTube}

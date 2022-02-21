@@ -1,14 +1,14 @@
 import clsx from 'clsx'
-import { Instagram } from './icons/instagram'
-import { Twitter } from './icons/twitter'
-import { YouTube } from './icons/youtube'
-import { Octocat } from './icons/octocat'
+import {Instagram} from './icons/instagram'
+import {Twitter} from './icons/twitter'
+import {YouTube} from './icons/youtube'
+import {Octocat} from './icons/octocat'
 
 interface Props {
   className?: string
 }
 
-const SocialsAside = ({ className }: Props) => {
+const SocialsAside = ({className}: Props) => {
   return (
     <aside className={clsx(['socials-aside', className])}>
       <a href="https://www.instagram.com/jonmajorc/" className="link instagram">
@@ -30,4 +30,4 @@ const SocialsAside = ({ className }: Props) => {
   )
 }
 
-export { SocialsAside }
+export {SocialsAside}

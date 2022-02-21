@@ -16,4 +16,4 @@ const Sun = () => {
   )
 }
 
-export { Sun }
+export {Sun}

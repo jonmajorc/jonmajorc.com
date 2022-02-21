@@ -18,4 +18,4 @@ const Octocat = () => {
   )
 }
 
-export { Octocat }
+export {Octocat}

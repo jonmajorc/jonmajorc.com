@@ -9,7 +9,7 @@ const themes: Array<Theme> = Object.values(Theme)
 type ThemeContextType = [Theme, React.Dispatch<React.SetStateAction<Theme>>]
 
 const ThemeContext = React.createContext<ThemeContextType | undefined>(
-  undefined
+  undefined,
 )
 ThemeContext.displayName = 'ThemeContext'
 
@@ -37,4 +37,4 @@ function useTheme() {
   return context
 }
 
-export { ThemeProvider, useTheme, themes, Theme }
+export {ThemeProvider, useTheme, themes, Theme}

@@ -4,7 +4,7 @@ interface Props {
   className?: string
 }
 
-const JMCLogo = ({ className, ...props }: Props) => {
+const JMCLogo = ({className}: Props) => {
   return (
     <svg
       className={clsx(['icons jmc-logo themed', className])}
@@ -298,4 +298,4 @@ const JMCLogo = ({ className, ...props }: Props) => {
   )
 }
 
-export { JMCLogo }
+export {JMCLogo}

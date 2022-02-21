@@ -19,4 +19,4 @@ const Moon = () => {
   )
 }
 
-export { Moon }
+export {Moon}

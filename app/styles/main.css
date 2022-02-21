@@ -11,33 +11,38 @@ body {
   max-width: 2560px;
   margin: 0 auto;
   height: 100vh;
-  width: 100%; }
-  body.theme--dark {
-    background: #000; }
-  body.theme--light {
-    background: #fff; }
+  width: 100%;
+}
+body.theme--dark {
+  background: #000;
+}
+body.theme--light {
+  background: #fff;
+}
 
 .theme--light .background::before {
   content: '';
-  background: url("/me-l.jpg") no-repeat;
+  background: url('/me-l.jpg') no-repeat;
   background-size: cover;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-position: 40%; }
+  background-position: 40%;
+}
 
 .theme--dark .background::before {
   content: '';
-  background: url("/me-d.jpg") no-repeat;
+  background: url('/me-d.jpg') no-repeat;
   background-size: cover;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-position: 40%; }
+  background-position: 40%;
+}
 
 .noise {
   position: fixed;
@@ -50,88 +55,120 @@ body {
   background-repeat: repeat;
   animation: bg-animation 1s steps(2) infinite;
   opacity: 0.95;
-  visibility: visible; }
-  .theme--light .noise {
-    background: url("/noise-l.png");
-    background-color: #fff; }
-  .theme--dark .noise {
-    background: url("/noise-d.png");
-    background-color: #000; }
+  visibility: visible;
+}
+.theme--light .noise {
+  background: url('/noise-l.png');
+  background-color: #fff;
+}
+.theme--dark .noise {
+  background: url('/noise-d.png');
+  background-color: #000;
+}
 
 @keyframes bg-animation {
   0% {
-    transform: translate(0, 0); }
+    transform: translate(0, 0);
+  }
   10% {
-    transform: translate(-5%, -5%); }
+    transform: translate(-5%, -5%);
+  }
   20% {
-    transform: translate(-10%, 5%); }
+    transform: translate(-10%, 5%);
+  }
   30% {
-    transform: translate(5%, -10%); }
+    transform: translate(5%, -10%);
+  }
   40% {
-    transform: translate(-5%, 15%); }
+    transform: translate(-5%, 15%);
+  }
   50% {
-    transform: translate(-10%, 5%); }
+    transform: translate(-10%, 5%);
+  }
   60% {
-    transform: translate(15%, 0); }
+    transform: translate(15%, 0);
+  }
   70% {
-    transform: translate(0, 10%); }
+    transform: translate(0, 10%);
+  }
   80% {
-    transform: translate(-15%, 0); }
+    transform: translate(-15%, 0);
+  }
   90% {
-    transform: translate(10%, 5%); }
+    transform: translate(10%, 5%);
+  }
   100% {
-    transform: translate(5%, 0); } }
+    transform: translate(5%, 0);
+  }
+}
 
 @font-face {
   font-family: 'Cutive';
-  src: url("/fonts/Cutive-Regular.ttf") format("truetype");
+  src: url('/fonts/Cutive-Regular.ttf') format('truetype');
   font-weight: normal;
-  font-style: normal; }
+  font-style: normal;
+}
 
 @font-face {
   font-family: 'Cutive Mono';
-  src: url("/fonts/CutiveMono-Regular.ttf") format("truetype");
+  src: url('/fonts/CutiveMono-Regular.ttf') format('truetype');
   font-weight: normal;
-  font-style: normal; }
+  font-style: normal;
+}
 
 @font-face {
   font-family: 'Cute Font';
-  src: url("/fonts/CuteFont-Regular.ttf") format("truetype");
+  src: url('/fonts/CuteFont-Regular.ttf') format('truetype');
   font-weight: normal;
-  font-style: normal; }
+  font-style: normal;
+}
 
 .typography__mono {
-  font-family: Cutive Mono, monospace; }
-  @media (min-width: 576px) {
-    .typography__mono {
-      font-size: 1em; } }
-  @media (min-width: 992px) {
-    .typography__mono {
-      font-size: 1.2em; } }
+  font-family: Cutive Mono, monospace;
+}
+@media (min-width: 576px) {
+  .typography__mono {
+    font-size: 1em;
+  }
+}
+@media (min-width: 992px) {
+  .typography__mono {
+    font-size: 1.2em;
+  }
+}
 
 .typography__cute {
   font-family: Cute Font, cursive;
   font-size: 2em;
-  line-height: 0.7; }
+  line-height: 0.7;
+}
 
 span {
   display: block;
-  font-size: 12px; }
-  .theme--light span {
-    color: #000; }
-  .theme--dark span {
-    color: #fff; }
-  @media (min-width: 576px) {
-    span {
-      font-size: 14px; } }
-  span.small {
-    font-size: 12px; }
+  font-size: 12px;
+}
+.theme--light span {
+  color: #000;
+}
+.theme--dark span {
+  color: #fff;
+}
+@media (min-width: 576px) {
+  span {
+    font-size: 14px;
+  }
+}
+span.small {
+  font-size: 12px;
+}
 
 .theme--light p {
-  color: #000; }
+  color: #000;
+}
 
 .theme--dark p {
-  color: #fff; }
+  color: #fff;
+}
 
 /*************************************\
   layouts
@@ -140,30 +177,38 @@ span {
   pages
 \************************************/
 .home {
-  position: relative; }
-  .home__banner {
-    animation: fadein 500ms cubic-bezier(0.53, 1.51, 0.69, 1.15);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 85vh;
-    min-height: 500px; }
-  .home__top-content {
-    width: 100%;
-    display: flex;
-    align-items: center; }
-    .home__top-content .home__socials-aside {
-      position: absolute;
-      left: 15px; }
-    .home__top-content .home__jmc-logo {
-      margin: 0 auto; }
+  position: relative;
+}
+.home__banner {
+  animation: fadein 500ms cubic-bezier(0.53, 1.51, 0.69, 1.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 85vh;
+  min-height: 500px;
+}
+.home__top-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.home__top-content .home__socials-aside {
+  position: absolute;
+  left: 15px;
+}
+.home__top-content .home__jmc-logo {
+  margin: 0 auto;
+}
+.home__intro {
+  margin-top: 60px;
+  text-align: center;
+}
+@media (min-width: 576px) {
   .home__intro {
-    margin-top: 60px;
-    text-align: center; }
-    @media (min-width: 576px) {
-      .home__intro {
-        margin-top: 90px; } }
+    margin-top: 90px;
+  }
+}
 
 /************************************\
   components
@@ -174,63 +219,87 @@ span {
   align-items: center;
   letter-spacing: 3px;
   text-align: center;
-  height: 50px; }
-  @media (min-width: 576px) {
-    .header {
-      letter-spacing: 5px; } }
-  .header__hamburger {
-    position: absolute;
-    left: 15px; }
-  .header__brand {
-    margin: 0 auto; }
-  .header__theme-mode-btn {
-    position: absolute;
-    right: 15px;
-    display: flex;
-    background: transparent;
-    border: none;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px; }
-    .header__theme-mode-btn > svg {
-      height: 25px; }
-    @media (min-width: 576px) {
-      .header__theme-mode-btn > svg {
-        height: 50px; } }
+  height: 50px;
+}
+@media (min-width: 576px) {
+  .header {
+    letter-spacing: 5px;
+  }
+}
+.header__hamburger {
+  position: absolute;
+  left: 15px;
+}
+.header__brand {
+  margin: 0 auto;
+}
+.header__theme-mode-btn {
+  position: absolute;
+  right: 15px;
+  display: flex;
+  background: transparent;
+  border: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+}
+.header__theme-mode-btn > svg {
+  height: 25px;
+}
+@media (min-width: 576px) {
+  .header__theme-mode-btn > svg {
+    height: 50px;
+  }
+}
 
 .icons {
-  transition: height 0.5s ease, width 0.5s ease; }
-  .theme--light .icons.themed * {
-    fill: #000; }
-  .theme--dark .icons.themed * {
-    fill: #fff; }
+  transition: height 0.5s ease, width 0.5s ease;
+}
+.theme--light .icons.themed * {
+  fill: #000;
+}
+.theme--dark .icons.themed * {
+  fill: #fff;
+}
+.icons.jmc-logo {
+  width: 150px;
+}
+@media (min-width: 576px) {
   .icons.jmc-logo {
-    width: 150px; }
-    @media (min-width: 576px) {
-      .icons.jmc-logo {
-        width: 208px; } }
+    width: 208px;
+  }
+}
 
 .socials-aside {
   display: inline-flex;
   flex-direction: column;
   height: 155px;
-  justify-content: space-between; }
+  justify-content: space-between;
+}
+.socials-aside svg {
+  height: 20px;
+  width: 20px;
+}
+@media (min-width: 576px) {
   .socials-aside svg {
-    height: 20px;
-    width: 20px; }
-  @media (min-width: 576px) {
-    .socials-aside svg {
-      height: 25px;
-      width: 25px; } }
-  .socials-aside .link {
-    display: flex; }
-    .socials-aside .link.instagram:hover path {
-      fill: #e1306c; }
-    .socials-aside .link.twitter:hover path {
-      fill: #1da1f2; }
-    .socials-aside .link.youtube:hover path {
-      fill: #ff0000; }
-    .socials-aside .link.github:hover path {
-      fill: #ffdc80; }
+    height: 25px;
+    width: 25px;
+  }
+}
+.socials-aside .link {
+  display: flex;
+}
+.socials-aside .link.instagram:hover path {
+  fill: #e1306c;
+}
+.socials-aside .link.twitter:hover path {
+  fill: #1da1f2;
+}
+.socials-aside .link.youtube:hover path {
+  fill: #ff0000;
+}
+.socials-aside .link.github:hover path {
+  fill: #ffdc80;
+}

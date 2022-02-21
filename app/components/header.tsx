@@ -1,6 +1,7 @@
-import { Theme, useTheme } from '~/utils/theme-provider'
-import { Moon } from './icons/moon'
-import { Sun } from './icons/sun'
+import React from 'react'
+import {Theme, useTheme} from '~/utils/theme-provider'
+import {Moon} from './icons/moon'
+import {Sun} from './icons/sun'
 
 const Header = () => {
   const [theme, setTheme] = useTheme()
@@ -14,8 +15,8 @@ const Header = () => {
       <button
         className="header__theme-mode-btn"
         onClick={() =>
-          setTheme((prevTheme) =>
-            prevTheme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT
+          setTheme(prevTheme =>
+            prevTheme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT,
           )
         }
       >
@@ -24,4 +25,4 @@ const Header = () => {
     </header>
   )
 }
-export { Header }
+export {Header}

@@ -16,4 +16,4 @@ const Twitter = () => {
   )
 }
 
-export { Twitter }
+export {Twitter}

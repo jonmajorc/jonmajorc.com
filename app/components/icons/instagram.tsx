@@ -1,3 +1,5 @@
+import React from 'react'
+
 const Instagram = () => {
   return (
     <svg
@@ -16,4 +18,4 @@ const Instagram = () => {
   )
 }
 
-export { Instagram }
+export {Instagram}
