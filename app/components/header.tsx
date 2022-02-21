@@ -1,5 +1,5 @@
-import React from 'react'
 import {Theme, useTheme} from '~/utils/theme-provider'
+
 import {Moon} from './icons/moon'
 import {Sun} from './icons/sun'
 

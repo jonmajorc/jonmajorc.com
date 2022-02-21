@@ -1,8 +1,9 @@
 import clsx from 'clsx'
+
 import {Instagram} from './icons/instagram'
+import {Octocat} from './icons/octocat'
 import {Twitter} from './icons/twitter'
 import {YouTube} from './icons/youtube'
-import {Octocat} from './icons/octocat'
 
 interface Props {
   className?: string
