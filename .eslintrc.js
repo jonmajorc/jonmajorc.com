@@ -5,6 +5,8 @@ module.exports = {
     project: './tsconfig.json',
   },
   rules: {
+    'no-undef': 2,
+
     '@typescript-eslint/semi': 'off',
     'import/extensions': 'off',
     'react/react-in-jsx-scope': 'off',

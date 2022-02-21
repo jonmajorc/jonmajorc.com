@@ -1,3 +1,4 @@
+import clsx from 'clsx'
 import {
   Links,
   LiveReload,
@@ -7,9 +8,10 @@ import {
   ScrollRestoration,
 } from 'remix'
 import type {MetaFunction} from 'remix'
+import {Header} from '~/components/header'
 import mainStyles from '~/styles/main.css'
 import {getSocialMetas} from '~/utils/seo'
-import {Header} from '~/components/header'
+
 import {ThemeProvider} from './utils/theme-provider'
 
 export const meta: MetaFunction = () => {
