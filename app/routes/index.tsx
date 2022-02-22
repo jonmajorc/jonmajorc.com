@@ -1,3 +1,4 @@
+import {Footer} from '~/components/footer'
 import {JMCLogo} from '~/components/icons/jmc-logo'
 import {SocialsAside} from '~/components/socials-aside'
 
@@ -15,6 +16,7 @@ export default function Index() {
           <p>Praise Jesus 🙌</p>
         </div>
       </section>
+      <Footer />
     </main>
   )
 }

@@ -10,8 +10,8 @@ $themes: (
     background: $white,
     contrast0: $black-light,
     contrast1: $lime,
-    bg-noise: '/noise-l.png',
-    me-banner: '/me-l.jpg',
+    bg-noise: '/noise-light.png',
+    me-banner: '/silhouette-light.jpg',
   ),
   dark: (
     primary: $white,
@@ -19,7 +19,7 @@ $themes: (
     text-color: $white,
     contrast0: $white,
     contrast1: $lime,
-    bg-noise: '/noise-d.png',
-    me-banner: '/me-d.jpg',
+    bg-noise: '/noise-dark.png',
+    me-banner: '/silhouette-dark.jpg',
   ),
 );

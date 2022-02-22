@@ -1,3 +1,22 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  color: inherit;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+input,
+select,
+textarea,
+button {
+  font-family: inherit;
+}
+
 body {
   font-family: cutive;
   line-height: 1.5;
@@ -28,7 +47,13 @@ body {
       left: 0;
       right: 0;
       bottom: 0;
-      background-position: 40%;
+      height: 500px;
+      max-height: 950px;
+      background-position: 47%;
+
+      @include md {
+        height: 70vw;
+      }
     }
   }
 }
@@ -43,7 +68,7 @@ body {
   height: 200vh;
   background-repeat: repeat;
   animation: bg-animation 1s steps(2) infinite;
-  opacity: 0.95;
+  opacity: 0.9;
   visibility: visible;
 
   @include themed() {
