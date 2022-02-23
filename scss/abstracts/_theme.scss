@@ -1,0 +1,20 @@
+$themes: (
+  light: (
+    primary: $black-dark,
+    text-color: $black-light,
+    background: $white,
+    contrast0: $black-light,
+    contrast1: $lime,
+    bg-noise: '/noise-light.png',
+    me-banner: '/silhouette-light.jpg',
+  ),
+  dark: (
+    primary: $white,
+    background: $black-dark,
+    text-color: $white,
+    contrast0: $white,
+    contrast1: $pink,
+    bg-noise: '/noise-dark.png',
+    me-banner: '/silhouette-dark.jpg',
+  ),
+);

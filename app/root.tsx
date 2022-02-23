@@ -12,6 +12,7 @@ import {Header} from '~/components/header'
 import mainStyles from '~/styles/main.css'
 import {getSocialMetas} from '~/utils/seo'
 
+import {Footer} from './components/footer'
 import {ThemeProvider} from './utils/theme-provider'
 
 export const meta: MetaFunction = () => {
@@ -36,33 +37,39 @@ export function links() {
     },
     {
       rel: 'preload',
-      href: '/noise-d.png',
+      href: '/noise-dark.png',
       as: 'image',
       type: 'image/png',
     },
     {
       rel: 'preload',
-      href: '/noise-l.png',
+      href: '/noise-light.png',
       as: 'image',
       type: 'image/png',
     },
     {
       rel: 'preload',
-      href: '/me.png',
-      as: 'image',
-      type: 'image/png',
-    },
-    {
-      rel: 'preload',
-      href: '/me-l.jpg',
+      href: '/silhouette-dark.jpg',
       as: 'image',
       type: 'image/jpg',
     },
     {
       rel: 'preload',
-      href: '/me-d.jpg',
+      href: '/silhouette-dark.jpg',
       as: 'image',
       type: 'image/jpg',
+    },
+    {
+      rel: 'preload',
+      href: '/highlight-blood.svg',
+      as: 'image',
+      type: 'image/svg+xml',
+    },
+    {
+      rel: 'preload',
+      href: 'https://s2.svgbox.net/pen-brushes.svg?ic=brush-6&color=EE3F46',
+      as: 'image',
+      type: 'image/svg+xml',
     },
     {rel: 'stylesheet', href: mainStyles},
   ]
@@ -80,11 +87,12 @@ export default function App() {
       <ThemeProvider>
         {theme => {
           return (
-            <body className={clsx(['body', `theme--${theme}`])}>
+            <body className={clsx(['body', `theme--${theme.mode}`])}>
               <div className="background" />
-              <div className="noise" />
+              <div className="noise" data-noise={theme.noise} />
               <Header />
               <Outlet />
+              <Footer />
               <ScrollRestoration />
               <Scripts />
               <LiveReload />

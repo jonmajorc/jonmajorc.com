@@ -5,6 +5,9 @@
     &.themed * {
       fill: t('primary');
     }
+    &.themed-stroke * {
+      stroke: t('primary');
+    }
   }
 
   &.jmc-logo {

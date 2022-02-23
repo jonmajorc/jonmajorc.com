@@ -27,12 +27,9 @@ $p4: 10px;
 .typography {
   &__mono {
     font-family: Cutive Mono, monospace;
-    @include sm {
-      font-size: 1em;
-    }
-    @include lg {
-      font-size: 1.2em;
-    }
+    letter-spacing: 0;
+    font-size: $p1;
+    line-height: 1.5;
   }
 
   &__cute {
@@ -46,25 +43,62 @@ h1,
 h2,
 h3,
 span,
+blockquote,
 p {
   @include themed() {
     color: t('primary');
   }
 }
 
+h1,
+h2,
+h3 {
+  font-family: Cutive Mono;
+}
+
+blockquote {
+  font-family: Cute Font;
+  font-size: 22px;
+  position: relative;
+
+  &:before {
+    content: '"';
+    font-size: 60px;
+    position: absolute;
+    top: -10px;
+    left: -20px;
+  }
+
+  @include md {
+    font-size: 32px;
+  }
+}
+
+p,
 span {
+  letter-spacing: 1px;
   display: block;
-  font-size: $p3;
+  font-size: $p2;
 
   @include themed() {
     color: t('primary');
   }
 
-  @include sm {
-    font-size: $p2;
-  }
-
   &.small {
     font-size: $p3;
   }
+}
+
+span {
+  line-height: 1.5;
+}
+
+p {
+  line-height: 2;
+}
+
+.highlight {
+  background: url('https://s2.svgbox.net/pen-brushes.svg?ic=brush-6&color=EE3F46');
+  margin: -2px -6px;
+  padding: 2px 6px;
 }

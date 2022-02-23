@@ -10,6 +10,12 @@
   }
 }
 
+*::selection {
+  @include themed() {
+    background: t('contrast1');
+  }
+}
+
 input,
 select,
 textarea,
@@ -19,14 +25,9 @@ button {
 
 body {
   font-family: cutive;
-  line-height: 1.5;
-
   position: relative;
   max-width: 2560px;
   margin: 0 auto;
-
-  height: 100vh;
-  width: 100%;
 
   &.theme--dark {
     background: $black-dark;
@@ -37,23 +38,20 @@ body {
 }
 
 .background {
-  &::before {
-    @include themed() {
-      content: '';
-      background: url(t('me-banner')) no-repeat;
-      background-size: cover;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      height: 500px;
-      max-height: 950px;
-      background-position: 47%;
+  @include themed() {
+    background: url(t('me-banner')) no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 500px;
+    max-height: 950px;
+    background-position: 47%;
 
-      @include md {
-        height: 70vw;
-      }
+    @include md {
+      height: 70vw;
     }
   }
 }
@@ -74,6 +72,10 @@ body {
   @include themed() {
     background: url(t('bg-noise'));
     background-color: t('background');
+  }
+
+  &[data-noise='false'] {
+    animation: none;
   }
 }
 

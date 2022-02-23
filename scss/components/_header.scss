@@ -6,25 +6,42 @@ $icon-max-height: 50px;
   align-items: center;
   letter-spacing: 3px;
   text-align: center;
-  height: $icon-max-height;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-areas: 'nav brand theme';
 
   @include sm {
     letter-spacing: 5px;
   }
 
   &__hamburger {
+    grid-area: nav;
     position: absolute;
     left: 15px;
   }
 
   &__brand {
-    margin: 0 auto;
+    grid-area: brand;
+    align-self: flex-start;
+    margin-top: 10px;
+
+    a {
+      letter-spacing: 3px;
+      text-decoration: none;
+    }
   }
 
-  &__theme-mode-btn {
-    position: absolute;
+  &__right {
+    grid-area: theme;
+    align-items: flex-end;
+    top: 0;
     right: 15px;
     display: flex;
+    flex-direction: column;
+  }
+
+  &__noise-btn,
+  &__theme-btn {
     background: transparent;
     border: none;
     padding: 0;
@@ -33,7 +50,8 @@ $icon-max-height: 50px;
     justify-content: center;
     width: 50px;
 
-    > svg {
+    .eye,
+    .eye-off {
       height: 25px;
     }
 

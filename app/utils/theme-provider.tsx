@@ -1,10 +1,16 @@
 import * as React from 'react'
 
-enum Theme {
+enum Themes {
   DARK = 'dark',
   LIGHT = 'light',
 }
-const themes: Array<Theme> = Object.values(Theme)
+
+interface Theme {
+  mode: Themes
+  noise: boolean
+}
+
+const themes: Array<Themes> = Object.values(Themes)
 
 type ThemeContextType = [Theme, React.Dispatch<React.SetStateAction<Theme>>]
 
@@ -16,10 +22,13 @@ ThemeContext.displayName = 'ThemeContext'
 function ThemeProvider({
   children,
 }: {
-  children: (theme: string) => React.ReactNode
+  children: (theme: Theme) => React.ReactNode
 }) {
   const [theme, setTheme] = React.useState<Theme>(() => {
-    return Theme.DARK
+    return {
+      mode: Themes.DARK,
+      noise: true,
+    }
   })
 
   return (
@@ -37,4 +46,4 @@ function useTheme() {
   return context
 }
 
-export {ThemeProvider, useTheme, themes, Theme}
+export {ThemeProvider, useTheme, themes, Themes}

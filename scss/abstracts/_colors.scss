@@ -2,24 +2,4 @@ $white: #fff;
 $black-dark: #000;
 $black-light: #1b1616;
 $lime: #99fbd2;
-
-$themes: (
-  light: (
-    primary: $black-dark,
-    text-color: $black-light,
-    background: $white,
-    contrast0: $black-light,
-    contrast1: $lime,
-    bg-noise: '/noise-light.png',
-    me-banner: '/silhouette-light.jpg',
-  ),
-  dark: (
-    primary: $white,
-    background: $black-dark,
-    text-color: $white,
-    contrast0: $white,
-    contrast1: $lime,
-    bg-noise: '/noise-dark.png',
-    me-banner: '/silhouette-dark.jpg',
-  ),
-);
+$pink: #ee3f46;

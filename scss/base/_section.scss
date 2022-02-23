@@ -1,0 +1,21 @@
+section {
+  margin: 0 auto;
+  padding: 0 40px;
+  max-width: $screen-sm-min - 60px;
+
+  &.spacing {
+    margin: 100px auto;
+  }
+
+  @include md {
+    max-width: $screen-md-min - 60px;
+  }
+
+  @include lg {
+    max-width: $screen-lg-min - 60px;
+  }
+
+  @include xl {
+    max-width: $screen-xl-min - 60px;
+  }
+}

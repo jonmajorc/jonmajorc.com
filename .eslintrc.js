@@ -5,8 +5,10 @@ module.exports = {
     project: './tsconfig.json',
   },
   rules: {
+    // on
     'no-undef': 2,
 
+    // off
     '@typescript-eslint/semi': 'off',
     'import/extensions': 'off',
     'react/react-in-jsx-scope': 'off',
@@ -26,5 +28,6 @@ module.exports = {
     'implicit-arrow-linebreak': 'off',
     'no-confusing-arrow': 'off',
     'react/button-has-type': 'off',
+    'react/jsx-one-expression-per-line': 'off',
   },
 }
