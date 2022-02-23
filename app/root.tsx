@@ -61,12 +61,6 @@ export function links() {
     },
     {
       rel: 'preload',
-      href: '/highlight-blood.svg',
-      as: 'image',
-      type: 'image/svg+xml',
-    },
-    {
-      rel: 'preload',
       href: 'https://s2.svgbox.net/pen-brushes.svg?ic=brush-6&color=EE3F46',
       as: 'image',
       type: 'image/svg+xml',
