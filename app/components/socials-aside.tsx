@@ -2,6 +2,7 @@ import clsx from 'clsx'
 
 import {Instagram} from './icons/instagram'
 import {Octocat} from './icons/octocat'
+import {Tiktok} from './icons/tiktok'
 import {Twitter} from './icons/twitter'
 import {YouTube} from './icons/youtube'
 
@@ -23,6 +24,9 @@ const SocialsAside = ({className}: Props) => {
         className="link youtube"
       >
         <YouTube />
+      </a>
+      <a href="https://www.tiktok.com/@jonmajorc" className="link tiktok">
+        <Tiktok />
       </a>
       <a href="https://github.com/jonmajorc" className="link github">
         <Octocat />
