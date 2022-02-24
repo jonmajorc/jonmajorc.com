@@ -58,7 +58,7 @@ h3 {
 
 blockquote {
   font-family: Cute Font;
-  font-size: 22px;
+  font-size: 20px;
   position: relative;
 
   &:before {
@@ -70,7 +70,7 @@ blockquote {
   }
 
   @include md {
-    font-size: 32px;
+    font-size: 28px;
   }
 }
 

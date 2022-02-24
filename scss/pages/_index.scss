@@ -1,6 +1,12 @@
 .home {
   position: relative;
 
+  &__quote {
+    @include md {
+      padding: 60px;
+    }
+  }
+
   &__banner {
     animation: fadein 500ms cubic-bezier(0.53, 1.51, 0.69, 1.15);
     display: flex;

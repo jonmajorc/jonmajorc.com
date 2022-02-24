@@ -42,10 +42,13 @@ export default function Index() {
         </p>
       </section>
       <section className="spacing">
-        <blockquote>
-          If you make things and share them, your heart will at some point be
-          broken. If you never share, it will harden. Your choice. ~ Todd henry
-        </blockquote>
+        <div className="home__quote">
+          <blockquote>
+            If you make things and share them, your heart will at some point be
+            broken. If you never share, it will harden. Your choice. ~ Todd
+            henry
+          </blockquote>
+        </div>
       </section>
     </main>
   )
