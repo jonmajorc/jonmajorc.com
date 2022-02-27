@@ -84,9 +84,7 @@ export default function App() {
             <body className={clsx(['body', `theme--${theme.mode}`])}>
               <div className="background" />
               <div className="noise" data-noise={theme.noise} />
-              <Header />
               <Outlet />
-              <Footer />
               <ScrollRestoration />
               <Scripts />
               <LiveReload />
