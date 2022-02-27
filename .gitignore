@@ -8,3 +8,5 @@ node_modules
 /app/styles
 # Local Netlify folder
 .netlify
+
+.DS_store

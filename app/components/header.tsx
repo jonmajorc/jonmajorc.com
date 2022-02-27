@@ -1,20 +1,28 @@
+import {Link} from 'remix'
 import {Themes, useTheme} from '~/utils/theme-provider'
 
 import {Eye} from './icons/eye'
 import {Moon} from './icons/moon'
 import {Sun} from './icons/sun'
 
-const Header = () => {
+export type Banner = 'name' | 'logo' | 'none'
+interface IHeader {
+  banner: Banner
+}
+
+const Header = ({banner = 'name'}: IHeader) => {
   const [theme, setTheme] = useTheme()
 
   return (
     <header className="header">
       {/* <div className="header__hamburger" /> */}
-      <div className="header__brand">
-        <a className=" typography__mono small" href="/">
-          Jon Major Condon
-        </a>
-      </div>
+      {banner === 'name' && (
+        <div className="header__brand">
+          <Link className=" typography__mono small" to="/">
+            Jon Major Condon
+          </Link>
+        </div>
+      )}
       <div className="header__right">
         <button
           className="header__theme-btn"
